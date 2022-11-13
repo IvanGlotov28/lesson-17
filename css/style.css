@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+body{
+    font-family: 'Lato', sans-serif;
+    color: #424551;
+}
+.wrapper{
+	overflow: hidden;
+	min-height: 100%;
+	position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper > main{
+	flex-grow: 1;
+}
+[class*="__container"]{
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.header {
+    width: 100%;
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 50;
+}
+.header__container {
+     display: flex;
+     gap: 60px;
+     flex-wrap: wrap;
+    align-items: center;}
+.header__menu{
+    flex-grow: 1;}
+.menu__list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 40px;
+    line-height: 160%;
+    font-weight: 700;
+    flex-grow: 1;}
+.menu__link:hover{
+    text-decoration: underline;}
+@media (max-width:1088px){
+    .header__container{
+        flex-wrap: nowrap; }
+    .menu__list {
+        display: flex;
+        column-gap: 20px;
+        flex-wrap: nowrap;   }
+    .header__menu{
+        flex-grow: 0;   }
+    .button{
+        max-height: 52px;  }
+}
+@media(max-width:1008px){
+    .header__container{
+        gap: 10px;  }
+    .menu__list {
+        display: flex;
+        column-gap: 25px;
+        flex-wrap: nowrap;   
+    }
+    .header__menu{
+        flex-grow: 1; }
+    .actions-header{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 10px;
+    }
+}
+ @media (max-width:961px){
+    .header__container{
+        gap: 20px;
+    }
+    .menu__list {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 22px;
+        gap: 0px; 
+    }
+  
+    .menu__item {
+        flex: 0 0 33.33%;
+    }
+    .actions-header__auth{
+        font-size: 20px;
+    }
+}
+
+@media (max-width:870px){
+    .menu__list{
+        flex-direction: column;
+
+    }
+    .menu__item{
+        flex: 0 1 ;
+    }
+}
+
+
+.actions-header {
+display: flex;
+align-items: baseline;
+gap: 36px;
+}
+.button{
+font-weight: 700;
+color: #ffff;
+background: linear-gradient(55.95deg, #FF3F3A 0%, #F75E05 100%);
+border-radius: 4px;
+padding: 16px 40px ;
+line-height: 1.25;
+letter-spacing: 0.5px;
+display: inline-block;
+}
+.button span:hover{
+    text-decoration: underline;
+}
+.actions-header__auth {
+    line-height: 160%;
+    font-weight: 700;}
+.actions-header__auth img {
+    position: relative;
+    top: 4px;
+    left: -8px;}
+.actions-header__auth span:hover{
+    text-decoration: underline;}
